@@ -1,5 +1,7 @@
 <template>
-  <div id="zh"></div>
+  <div class="search">
+      22
+  </div>
 </template>
 <script>
 export default {
@@ -15,12 +17,3 @@ export default {
 </script>
 <style lang="less" scoped>
 </style>
-    <!--  菜单栏-->
-    <div class="menu_bar">
-        <ul>
-            <li>
-                <span></span>
-            </li>
-        </ul>
-
-    </div>
