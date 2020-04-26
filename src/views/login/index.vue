@@ -1,10 +1,15 @@
 <template>
-  <div class="login">11</div>
+  <div class="login">
+    <login-page></login-page>
+  </div>
 </template>
 <script>
+import LoginPage from '../../components/login-page'
 export default {
-  name: "",
-  components: {},
+  components: {
+    LoginPage
+
+  },
   data() {
     return {};
   },

@@ -45,8 +45,8 @@ export default {
   display: flex;
 }
 .app_l img {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   padding-right: 10px;
 }
 .text {

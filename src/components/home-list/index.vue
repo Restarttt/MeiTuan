@@ -1,5 +1,13 @@
 <template>
   <div class="home-list">
+    <!--  菜单栏-->
+    <div class="menu_bar">
+      <ul>
+        <li>
+          <span></span>
+        </li>
+      </ul>
+    </div>
     <div class="food_list">
       <p class="tit">{{food_data.title}}</p>
       <div class="food">
@@ -19,7 +27,9 @@
           </li>
         </ul>
       </div>
-   
+    </div>
+    <div class="group">
+      <span>查看全部团购</span>
     </div>
   </div>
 </template>
@@ -134,9 +144,9 @@ export default {
 <style lang="less" scoped>
 .home-list {
   width: 100%;
-  border-top: 15px solid #ddd8ce;
 }
 .food_list {
+  border-top: 15px solid #ddd8ce;
   padding: 0 15px;
 }
 .tit {
@@ -193,5 +203,30 @@ span:nth-child(4) {
   right: 0;
   text-align: center;
   bottom: 12px;
+}
+// 团购
+.group {
+  width: 100%;
+  border-top: 1px solid #f3f4f5;
+  border-bottom: 1.5px solid #f3f4f5;
+  padding: 10px 15px;
+  position: relative;
+}
+.group span {
+  color: #fe8c00;
+  font-size: 16px;
+}
+.group span::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid #fe8c00;
+  border-bottom: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 5%;
+  top: 40%;
 }
 </style>

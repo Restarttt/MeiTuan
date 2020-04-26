@@ -3,7 +3,6 @@
     <home-nav></home-nav>
     <home-app></home-app>
     <home-list></home-list>
-    <home-list-one></home-list-one>
     <home-link></home-link>
   </div>
 </template>
@@ -30,4 +29,8 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.search {
+  width: 100%;
+  background-color: #f0efed;
+}
 </style>

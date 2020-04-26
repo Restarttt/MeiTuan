@@ -1,8 +1,5 @@
 <template>
   <div class="home-link">
-    <div class="group">
-      <span>查看全部团购</span>
-    </div>
     <!-- 用户服务 -->
     <div class="service">
       <!-- 登录 -->
@@ -25,6 +22,7 @@
       <div class="user_serve">
         <ul>
           <li v-for="(item,index) of serve_data" :key="index">
+            <i class="line" v-if="item.type === 1"></i>
             <a :herf="item.url">{{item.name}}</a>
           </li>
         </ul>
@@ -93,23 +91,23 @@ export default {
         },
         {
           name: "我的",
-          url: "https://i.meituan.com/account/"
+          url: "https://i.meituan.com/account/",
+          type: 1
         },
         {
           name: "美团下载",
-          url: "https://i.meituan.com/client"
-        },
-        {
-          name: "首页",
-          url: "https://www.meituan.com/?pcstyle=1"
+          url: "https://i.meituan.com/client",
+          type: 1
         },
         {
           name: "电脑版",
-          url: "https://i.meituan.com/help/"
+          url: "https://www.meituan.com/?pcstyle=1",
+          type: 1
         },
         {
           name: "帮助",
-          url: ""
+          url: "https://i.meituan.com/help/",
+          type: 1
         }
       ]
     };
@@ -121,32 +119,9 @@ export default {
 <style lang="less" scoped>
 .home-link {
   width: 100%;
+  background-color: #fff;
 }
-// 团购
-.group {
-  width: 100%;
-  border-top: 1px solid #f3f4f5;
-  border-bottom: 1.5px solid #f3f4f5;
-  padding: 10px 15px;
-  position: relative;
-}
-.group span {
-  color: #fe8c00;
-  font-size: 16px;
-}
-.group span::after {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border: 1.5px solid #fe8c00;
-  border-bottom: 0;
-  border-left: 0;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 5%;
-  top: 40%;
-}
+
 // 用户服务
 .service {
   width: 100%;
@@ -195,12 +170,22 @@ ul {
   position: relative;
 }
 ul li {
+  position: relative;
   border-left: 1px solid #f3f4f5;
 }
 .user_serve ul li a {
   font-size: 12px;
   color: #fe8c00;
   font-weight: 400;
+}
+.line {
+  position: absolute;
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #999;
+  left: -16px;
+  top: 6px;
 }
 // 友情链接
 .p_link {
@@ -226,21 +211,23 @@ ul li {
   text-align: center;
   position: relative;
 }
-.copyright-1{
+.copyright-1 {
+  position: relative;
+  width: 62%;
+  height: 20px;
   display: inline-block;
   background-color: #fff;
-  z-index: 10;
+  z-index: 1000;
 }
 .copyright span {
   font-size: 12px;
   color: #999;
-
 }
-.copyright::after {
+.copyright::before {
   content: "";
   display: inline-block;
-  width: 375px;
-  height: 2px;
+  width: 350px;
+  height: 1px;
   background-color: #f3f4f5;
   position: absolute;
   top: 10px;

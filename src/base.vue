@@ -15,12 +15,3 @@ export default {
 </script>
 <style lang="less" scoped>
 </style>
-    <!--  菜单栏-->
-    <div class="menu_bar">
-        <ul>
-            <li>
-                <span></span>
-            </li>
-        </ul>
-
-    </div>
