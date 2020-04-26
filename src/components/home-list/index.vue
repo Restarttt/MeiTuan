@@ -4,7 +4,8 @@
     <div class="menu_bar">
       <ul>
         <li>
-          <span></span>
+         <img src="" alt="">
+         <p></p>
         </li>
       </ul>
     </div>

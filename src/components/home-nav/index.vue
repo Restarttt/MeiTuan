@@ -3,7 +3,7 @@
     <!-- 顶部搜索 -->
     <div class="nav_search">
       <div class="location">
-        <span>吉安</span>
+        <span @click="skip()">吉安</span>
       </div>
       <div class="search" @click="go()">
         <img src="https://p0.meituan.net/travelcube/99c29829cf1b85d5cdbc76a1bd0b7329814.png" alt />
@@ -31,6 +31,9 @@ export default {
     },
     go_in() {
       this.$router.push("/login");
+    },
+     skip() {
+      this.$router.push("/location");
     }
   }
 };
