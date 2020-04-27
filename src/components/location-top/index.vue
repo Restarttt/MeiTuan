@@ -6,9 +6,15 @@
     <div class="top_c">
       <span>选择城市</span>
     </div>
-    <div class="top_r" >
-      <img  src="https://p1.meituan.net/travelcube/142ba119b889881105236ef57446e6bf866.png" @click="go()" >
-      <img src="https://p0.meituan.net/travelcube/4b45dc09c35f9175498345f8672d08991022.png" @click="go_on()" >
+    <div class="top_r">
+      <img
+        src="https://p1.meituan.net/travelcube/142ba119b889881105236ef57446e6bf866.png"
+        @click="go()"
+      />
+      <img
+        src="https://p0.meituan.net/travelcube/4b45dc09c35f9175498345f8672d08991022.png"
+        @click="go_on()"
+      />
     </div>
   </div>
 </template>
@@ -21,12 +27,12 @@ export default {
   },
   computed: {},
   methods: {
-      go(){
-          this.$router.push('/')
-      },
-      go_on(){
-          this.$router.push('/search')
-      }
+    go() {
+      this.$router.push("/");
+    },
+    go_on() {
+      this.$router.push("/search");
+    }
   }
 };
 </script>
@@ -48,7 +54,7 @@ export default {
   height: 18px;
 }
 .top_c {
-  width: 30%;
+  width: 24%;
 }
 .top_c span {
   font-size: 16px;
