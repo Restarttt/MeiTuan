@@ -13,10 +13,12 @@
         </div>
         <input type="text" value="请输入手机号" />
       </div>
+      <div class="line_t" @click="a()"></div>
       <div class="reg">
         <input type="text" value="请输入手机验证码" />
         <span class="code">获取验证码</span>
       </div>
+      <div class="line_b"></div>
       <!-- 登录按钮 -->
       <div class="login_btn">
         <span>登录</span>
@@ -49,7 +51,11 @@ export default {
     return {};
   },
   computed: {},
-  methods: {}
+  methods: {
+    a() {
+      document.querySelector(".line_t"), (a.style.backgroundColor = "#fe8c00");
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
@@ -68,21 +74,29 @@ export default {
 }
 // 登录
 .register {
+  width: 100%;
   padding: 20px 25px;
   height: 620px;
+  position: relative;
 }
 .reg {
   padding: 8px 0;
-  border-bottom: 1px solid #eee;
   margin-bottom: 20px;
   display: flex;
 }
-.reg_1{
-    padding: 8px 0;
-  border-bottom: 1px solid #ef8c00;
-  margin-bottom: 20px;
-  display: flex;
-
+.line_t {
+  width: 87%;
+  height: 1px;
+  border-bottom: 1px solid #eee;
+  position: absolute;
+  top: 9%;
+}
+.line_b {
+  width: 87%;
+  height: 1px;
+  border-bottom: 1px solid #eee;
+  position: absolute;
+  top: 18%;
 }
 i {
   display: inline-block;
