@@ -5,12 +5,12 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        name: {}
+        name: '吉安'
     },
     mutations: {
         ADD(state, name) {
             state.name = name
-            console.log(name)
+            console.log(state.name)
 
         }
 

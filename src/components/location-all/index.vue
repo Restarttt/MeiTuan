@@ -53,7 +53,7 @@ export default {
             url: "https://i.meituan.com/zhalantunshi/"
           },
           {
-            name: "HF",
+            name: "H",
             url: "https://i.meituan.com/zhalantunshi/"
           },
           {
@@ -118,7 +118,9 @@ export default {
     };
   },
   computed: {},
-  methods: {}
+  methods: {
+    
+  }
 };
 </script>
 <style lang="less" scoped>

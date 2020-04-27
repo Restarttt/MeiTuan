@@ -16,7 +16,9 @@ export default {
   props: {
     table: {
       type: Object,
-      default: {}
+      default: a => {
+        return {}
+      }
     }
   },
   data() {

@@ -1,5 +1,5 @@
 <template>
-  <div class="home-list-one">
+  <div class="home-list-one" @click="go()">
     <div class="food">
       <img :src="list.img" alt />
       <div class="detail">
@@ -29,7 +29,11 @@ export default {
     return {};
   },
   computed: {},
-  methods: {}
+  methods: {
+    go(){
+      this.$router.push('/detail')
+    }
+  }
 };
 </script>
 <style lang="less" scoped>

@@ -15,7 +15,7 @@
         <div class="loginbar_r">
           <span class="city">城市：</span>
           <img src="https://p1.meituan.net/travelcube/c6c04160817d530ecddf9f86b158106e2032.png" alt />
-          <span class="area">吉安</span>
+          <span class="area">{{chage}}</span>
         </div>
       </div>
       <!-- 美团相关 -->
@@ -112,7 +112,12 @@ export default {
       ]
     };
   },
-  computed: {},
+  computed: {
+    chage() {
+      console.log(this.$store.state.name);
+      return this.$store.state.name;
+    }
+  },
   methods: {}
 };
 </script>

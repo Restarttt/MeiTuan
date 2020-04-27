@@ -2,8 +2,12 @@
   <div class="city">
     <div class="table">
       <ul>
-        <h4 class="frist">A</h4>
-        <li v-for="(item,index) of city_data.list" :key="index" @click="add(item.name)">{{item.name}}</li>
+        <h4 class="first">{{city_data.h4}}</h4>
+        <li
+          v-for="(item,index) of city_data.list"
+          :key="index"
+          @click="change(item.name)"
+        >{{item.name}}</li>
       </ul>
     </div>
   </div>
@@ -22,16 +26,17 @@ export default {
   },
   computed: {},
   methods: {
-    add(name) {
-      console.log(name);
-      this.$store.commit('ADD',this.city_data);
-      console.log(this.city_data)
+    change(name){
+      console.log(name)
+      this.$store.commit('ADD',name)
+
     }
   }
 };
 </script>
 <style lang="less" scoped>
 .city {
+  clear: both;
   width: 100%;
 }
 .table {
@@ -40,6 +45,10 @@ export default {
   border-radius: 5px;
   margin-top: -1px;
 }
+ul {
+  background-color: #fff;
+  overflow: hidden;
+}
 ul li {
   width: 25%;
   height: 42px;
@@ -47,9 +56,9 @@ ul li {
   display: inline-block;
   text-align: center;
   line-height: 42px;
-  margin-bottom: -1px;
+  float: left;
 }
-.frist {
+.first {
   width: 25%;
   height: 84px;
   line-height: 84px;

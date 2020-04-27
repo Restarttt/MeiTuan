@@ -3,7 +3,7 @@
     <!-- 顶部搜索 -->
     <div class="nav_search">
       <div class="location">
-        <span @click="skip()">吉安</span>
+        <span @click="skip()">{{chage}}</span>
       </div>
       <div class="search" @click="go()">
         <img src="https://p0.meituan.net/travelcube/99c29829cf1b85d5cdbc76a1bd0b7329814.png" alt />
@@ -13,7 +13,6 @@
         <img src="https://p0.meituan.net/travelcube/641521461179df7cfb88738dd1ea11ec1031.png" alt />
       </div>
     </div>
- 
   </div>
 </template>
 <script>
@@ -24,7 +23,12 @@ export default {
   data() {
     return {};
   },
-  computed: {},
+  computed: {
+  chage() {
+      console.log(this.$store.state.name);
+      return this.$store.state.name;
+    }
+  },
   methods: {
     go() {
       this.$router.push("/search");
@@ -32,7 +36,7 @@ export default {
     go_in() {
       this.$router.push("/login");
     },
-     skip() {
+    skip() {
       this.$router.push("/location");
     }
   }
