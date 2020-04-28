@@ -13,17 +13,18 @@
           <img src="../../assets/collect.png" alt />
           <p>收藏</p>
         </div>
-        <div class="collect">
+        <div class="collect" @click="hit_h()">
           <img src="../../assets/nav.png" alt />
           <p>导航</p>
-          <div class="subnav">
+          <!-- 首页 -->
+          <div class="subnav" v-show="hit">
             <div class="subnav_t" @click="go()">
-              <img src alt />
-              <span></span>
+              <img src="../../assets/index.png" alt />
+              <span>首页</span>
             </div>
             <div class="subnav_b" @click="go_login()">
-              <img src alt />
-              <span></span>
+              <img src="../../assets/me.png" alt />
+              <span>我的</span>
             </div>
           </div>
         </div>
@@ -41,23 +42,32 @@ export default {
   name: "detail-top",
   props: {},
   data() {
-    return {};
+    return {
+      hit: false
+    };
   },
   computed: {},
   methods: {
-    go(){
-      this.$router.push('/')
+    go() {
+      this.$router.push("/");
     },
-    go_login(){
-      this.$router.push('/login')
+    go_login() {
+      this.$router.push("/login");
+    },
+    hit_h() {
+      this.hit = true;
     }
   }
 };
 </script>
 <style lang="less" scoped>
+img {
+  width: 100%;
+  height: 110px;
+}
 .detail-top {
   width: 100%;
-  height: 53px;
+  height: 163px;
   background: #06c1ae;
   border-bottom: 1px solid #21897d;
 }
@@ -101,8 +111,19 @@ export default {
   background-color: #06c1ae;
   right: -18px;
   top: 46px;
+  text-align: center;
+  line-height: 41px;
 }
-.subnav_t{
+.subnav_t {
+  height: 41px;
   border-bottom: 1px solid #ccc;
+}
+.subnav span {
+  color: #fff;
+  font-size: 12px;
+}
+.subnav img {
+  vertical-align: middle;
+  margin-right: 8px;
 }
 </style>
