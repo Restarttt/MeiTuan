@@ -2,6 +2,7 @@
   <div class="business_service">
     <!-- 商家信息 -->
     <div class="message">
+      <!-- <h3>{{message.title}}</h3> -->
       <div class="message_location">
         <div class="location_l">
           <p>{{message.name}}</p>
@@ -33,10 +34,6 @@
       <ul>
         <li v-for="(item,index) of package" :key="index">{{item.name}}</li>
       </ul>
-    </div>
-    <!-- 图文详情 -->
-    <div class="group">
-      <span>查看图文详情</span>
     </div>
     <!-- 购买须知 -->
     <div class="buy">
@@ -103,10 +100,19 @@ export default {
 .business_service {
   width: 100%;
 }
+h3 {
+  width: 100%;
+  display: inline-block;
+  font-size: 17px;
+  color: #333;
+  padding: 10px;
+  border-bottom: 1px solid #ddd8ce;
+}
 // 商家信息
 .message {
   background-color: #fff;
   width: 100%;
+  margin-bottom: 10px ;
 }
 .message_location {
   display: flex;
@@ -194,34 +200,6 @@ ul li {
   padding: 3px 0;
   list-style-type: disc;
 }
-// 查看图文信息
-.group {
-  background-color: #fff;
-  width: 100%;
-  border-top: 1px solid #ddd8ce;
-  border-bottom: 1.5px solid #ddd8ce;
-  padding: 10px 15px;
-  position: relative;
-  margin-bottom: 10px;
-}
-.group span {
-  color: #06c1ae;
-  font-size: 16px;
-}
-.group span::after {
-  content: "";
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border: 1.5px solid #06c1ae;
-  border-bottom: 0;
-  border-left: 0;
-  transform: rotate(45deg);
-  position: absolute;
-  right: 5%;
-  top: 40%;
-}
-
 // 购买须知
 .buy {
   background-color: #fff;
