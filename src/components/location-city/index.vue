@@ -6,7 +6,7 @@
         <li
           v-for="(item,index) of city_data.list"
           :key="index"
-          @click="change(item.name)"
+          @click="change(item.name,visit_data.list)"
         >{{item.name}}</li>
       </ul>
     </div>
@@ -19,6 +19,12 @@ export default {
     city_data: {
       type: Object,
       default: {}
+    },
+    visit_data: {
+      type: Object,
+      default: a => {
+        return {};
+      }
     }
   },
   data() {
@@ -26,10 +32,11 @@ export default {
   },
   computed: {},
   methods: {
-    change(name){
-      console.log(name)
-      this.$store.commit('ADD',name)
-
+    change(name,list) {
+      // console.log(name);
+      this.$store.commit("ADD", name)
+      list.push({name});
+      console.log(list)
     }
   }
 };

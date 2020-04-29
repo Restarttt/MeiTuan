@@ -19,7 +19,8 @@ export default {
       default: a => {
         return {}
       }
-    }
+    },
+
   },
   data() {
     return {};

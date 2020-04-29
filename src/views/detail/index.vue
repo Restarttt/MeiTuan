@@ -65,7 +65,7 @@ export default {
           img2:
             "https://p1.meituan.net/shaitu/8feb4f7a0330592ee2baa3ecfa2a45e34611064.jpg@220w_220h_1e_1c",
           reply: ""
-        }
+        },       
       ],
       menu_data: [
         {

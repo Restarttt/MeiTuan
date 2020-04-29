@@ -40,6 +40,7 @@ export default {
 .home-list-one {
   width: 100%;
   padding: 0 15px;
+  background-color: #fff;
 }
 // 列表
 .food {

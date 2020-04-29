@@ -1,7 +1,7 @@
 <template>
   <div class="home_datail">
     <div class="group">
-      <span>{{home_detail.title}}</span>
+      <span :class="{first:home_detail.type === 1}">{{home_detail.title}}</span>
     </div>
   </div>
 </template>
@@ -9,9 +9,9 @@
 export default {
   name: "",
   props: {
-    home_detail:{
-      type:Object,
-      default:{}
+    home_detail: {
+      type: Object,
+      default: {}
     }
   },
   data() {
@@ -36,7 +36,23 @@ export default {
   color: #06c1ae;
   font-size: 16px;
 }
-.group span::after {
+span.first {
+  color: #fe8c00;
+}
+.first::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid #fe8c00;
+  border-bottom: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 5%;
+  top: 40%;
+}
+span::after {
   content: "";
   display: inline-block;
   width: 8px;
@@ -49,5 +65,4 @@ export default {
   right: 5%;
   top: 40%;
 }
-
 </style>

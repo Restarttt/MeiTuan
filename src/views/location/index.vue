@@ -6,9 +6,9 @@
       <location-visit-hot :table="visit_data"></location-visit-hot>
       <location-visit-hot :table="hot_city"></location-visit-hot>
       <location-all></location-all>
-      <location-city :city_data="city"></location-city>
-      <location-city :city_data="city_b"></location-city>
-      <location-city :city_data="city"></location-city>
+      <location-city :city_data="city" :visit_data="visit_data"></location-city>
+      <location-city :city_data="city_b" :visit_data="visit_data"></location-city>
+      <location-city :city_data="city" :visit_data="visit_data"></location-city>
       <home-link></home-link>
     </div>
   </div>
@@ -35,18 +35,18 @@ export default {
       visit_data: {
         title: "最近访问",
         list: [
-          {
-            name: "扎兰屯市",
-            url: "https://i.meituan.com/zhalantunshi/"
-          },
-          {
-            name: "扎兰屯市",
-            url: "https://i.meituan.com/zhalantunshi/"
-          },
-          {
-            name: "扎兰屯市",
-            url: "https://i.meituan.com/zhalantunshi/"
-          }
+          // {
+          //   name: "扎兰屯市",
+          //   url: "https://i.meituan.com/zhalantunshi/"
+          // },
+          // {
+          //   name: "扎兰屯市",
+          //   url: "https://i.meituan.com/zhalantunshi/"
+          // },
+          // {
+          //   name: "扎兰屯市",
+          //   url: "https://i.meituan.com/zhalantunshi/"
+          // }
         ]
       },
       hot_city: {
@@ -123,9 +123,7 @@ export default {
     };
   },
   computed: {},
-  methods: {
-    
-  }
+  methods: {}
 };
 </script>
 <style lang="less" scoped>

@@ -35,6 +35,10 @@
         <li v-for="(item,index) of package" :key="index">{{item.name}}</li>
       </ul>
     </div>
+    <!-- 查看图文 -->
+    <div class="group">
+      <span>{{home_detail.title}}</span>
+    </div>
     <!-- 购买须知 -->
     <div class="buy">
       <h3>{{buy.title}}</h3>
@@ -50,7 +54,14 @@
 <script>
 export default {
   name: "",
-  props: {},
+  props: {
+    home_detail: {
+      type: Object,
+      default: a => {
+        return {};
+      }
+    }
+  },
   components: {},
   data() {
     return {
@@ -97,6 +108,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+
 .business_service {
   width: 100%;
 }
@@ -112,7 +124,7 @@ h3 {
 .message {
   background-color: #fff;
   width: 100%;
-  margin-bottom: 10px ;
+  margin-bottom: 10px;
 }
 .message_location {
   display: flex;
@@ -204,15 +216,14 @@ ul li {
 .buy {
   background-color: #fff;
 }
-.buy_1{
-  padding:  3px 10px;
+.buy_1 {
+  padding: 3px 10px;
 }
-.buy_time{
-    color: #ff9900;
-    font-size: 15px;
-
+.buy_time {
+  color: #ff9900;
+  font-size: 15px;
 }
-ul li{
+ul li {
   padding-left: 10px;
 }
 </style>
