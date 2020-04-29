@@ -1,21 +1,21 @@
 <template>
   <div class="evaluate">
     <div class="user_mssage">
-      <img :src=" evaluate_data.head_img" alt />
+      <img :src=" data.head_img" alt />
       <!-- 头像信息 -->
       <div class="uesr_r">
-        <p>{{evaluate_data.name}}</p>
+        <p>{{data.name}}</p>
         <p>
           <i></i>
-          <span>{{evaluate_data.time}}</span>
+          <span>{{data.time}}</span>
         </p>
       </div>
       <!-- 评价内容 -->
       <div class="eva">
-        <p>{{evaluate_data.comment}}</p>
+        <p>{{data.comment}}</p>
         <div class="eva_img">
-          <img :src=" evaluate_data.img1" alt />
-          <img :src=" evaluate_data.img2" alt />
+          <img :src=" data.img1" alt />
+          <img :src=" data.img2" alt />
         </div>
         <p>豪德亨牛排自助餐厅（城南天虹店）</p>
       </div>
@@ -31,11 +31,9 @@
 export default {
   name: "",
   props: {
-   evaluate_data: {
+  data: {
       type: Array,
-      default:a =>{
-        return []
-      } 
+      default:[] 
     }
   },
   data() {

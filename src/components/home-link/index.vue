@@ -1,5 +1,9 @@
 <template>
   <div class="home-link">
+    <!-- 右边固定 -->
+    <div class="arrows">
+      <span></span>
+    </div>
     <!-- 用户服务 -->
     <div class="service">
       <!-- 登录 -->
@@ -122,6 +126,9 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+// 固定箭头
+
+
 .home-link {
   width: 100%;
   background-color: #fff;

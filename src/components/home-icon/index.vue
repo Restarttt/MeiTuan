@@ -41,4 +41,9 @@ ul li {
   width: 20%;
   display: inline-block;
 }
+p {
+  color: #666;
+  font-size: 12px;
+  margin: 5px;
+}
 </style>

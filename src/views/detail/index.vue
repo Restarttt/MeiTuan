@@ -7,11 +7,12 @@
     <detail-service></detail-service>
     <home-detail :home_detail="home_detail"></home-detail>
     <detail-title :message="evalute_title"></detail-title>
-    <detail-evaluate :evalute_data="evalute_data" ></detail-evaluate>
+    <detail-evaluate :data="evaluate_data" ></detail-evaluate>
     <home-detail :home_detail="evalute_detail"></home-detail>
     <detail-title :message="menu_title"></detail-title>
     <detail-menu :menu_data="item" v-for="(item,index) of menu_data" :key="index"></detail-menu>
     <detail-link></detail-link>
+    <div class="arrows"><span></span></div>
   </div>
 </template>
 <script>
@@ -54,7 +55,7 @@ export default {
       menu_title: {
         title: "豪德亨牛排自助餐厅"
       },
-      evalute_data: [
+      evaluate_data: [
         {
           head_img: "http://www.dpfile.com/ugc/user/anonymous.png",
           name: "匿名用户",
@@ -110,5 +111,20 @@ export default {
   width: 100%;
   height: 100%;
   background-color: #f0f0f0;
+}
+.arrows {
+  width: 43px;
+  height: 43px;
+  position: fixed;
+  right: 10%;
+    bottom: 8%;
+}
+.arrows span {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  background: url(https://s1.meituan.net/bs/file/?f=meis/meishi.mobile:assets/cbcd00b445480e50.png@f70bb75)
+    no-repeat;
+  background-size: cover;
 }
 </style>
