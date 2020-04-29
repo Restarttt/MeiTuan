@@ -15,7 +15,7 @@
           <span>元</span>
           <span class="money">门市价:78元</span>
         </div>
-        <div class="price_r">
+        <div class="price_r" @click="go()">
           <span>立即抢购</span>
         </div>
       </div>
@@ -45,7 +45,11 @@ export default {
     return {};
   },
   computed: {},
-  methods: {}
+  methods: {
+    go(){
+      this.$router.push('/purchase')
+    }
+  }
 };
 </script>
 <style lang="less" scoped>

@@ -1,7 +1,7 @@
 <template>
   <div class="icon">
     <ul>
-      <li v-for="(item,index) of icon" :key="index">
+      <li v-for="(item,index) of icon" :key="index" @click="go()">
         <img :src="item.img" alt />
         <p>{{item.name}}</p>
       </li>
@@ -21,7 +21,11 @@ export default {
     return {};
   },
   computed: {},
-  methods: {}
+  methods: {
+    go(){
+      this.$router.push('/food')
+    }
+  }
 };
 </script>
 <style lang="less" scoped>
