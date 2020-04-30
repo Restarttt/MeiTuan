@@ -61,6 +61,7 @@ export default {
 <style lang="less" scoped>
 .food-top {
   width: 100%;
+  background-color: #fff;
 }
 .top {
   height: 51px;

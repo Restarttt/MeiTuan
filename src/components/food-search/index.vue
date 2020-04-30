@@ -12,7 +12,7 @@
         <i></i>
         <span>输入商家名、品类或商圈</span>
       </div>
-      <img src="../../assets/home.png" alt />
+      <img src="../../assets/home.png" @click="go()" />
     </div>
     <!-- icon -->
     <div class="icon">
@@ -24,7 +24,7 @@
       </ul>
     </div>
     <!-- 选择栏目 -->
-    <van-dropdown-menu  active-color="#06c1ae">
+    <van-dropdown-menu active-color="#06c1ae">
       <van-dropdown-item v-model="value" :options="all" />
       <van-dropdown-item title="附近商家" v-model="value" :options="nearby"></van-dropdown-item>
       <van-dropdown-item title="智能排序" v-model="value" :options="sort"></van-dropdown-item>
@@ -139,6 +139,9 @@ export default {
   methods: {
     onConfirm() {
       this.$refs.item.toggle();
+    },
+    go() {
+      this.$router.push("/login");
     }
   }
 };
@@ -146,6 +149,8 @@ export default {
 <style lang="less" scoped>
 .food-search {
   width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
 }
 .search {
   width: 70%;
