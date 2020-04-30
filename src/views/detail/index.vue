@@ -6,6 +6,7 @@
     <detail-title :message="message_title"></detail-title>
     <detail-service></detail-service>
     <home-detail :home_detail="home_detail"></home-detail>
+    <!-- <detail-buy></detail-buy> -->
     <detail-title :message="evalute_title"></detail-title>
     <detail-evaluate :data="item" v-for="(item,index) of evaluate_data" :key="index"></detail-evaluate>
     <home-detail :home_detail="evalute_detail"></home-detail>
@@ -20,6 +21,7 @@
 <script>
 import DetailTop from "../../components/detail-top";
 import DetailService from "../../components/detail-service";
+// import DetailBuy from "../../components/detail-buy";
 import DetailKeyword from "../../components/detail-keyword";
 import DetailTitle from "../../components/detail-title";
 import DetailMenu from "../../components/detail-menu";
@@ -27,6 +29,7 @@ import DetailEvaluate from "../../components/detail-evaluate";
 import HomeDetail from "../../components/home-detail";
 import DetailRelate from "../../components/detail-relate";
 import DetailLink from "../../components/detail-link";
+
 export default {
   name: "detail",
   components: {
@@ -38,7 +41,8 @@ export default {
     DetailEvaluate,
     DetailRelate,
     HomeDetail,
-    DetailLink
+    DetailLink,
+    // DetailBuy
   },
   data() {
     return {
@@ -68,8 +72,10 @@ export default {
             "https://p0.meituan.net/shaitu/5e41bf7143897716b1610889034dd47f269476.jpg@220w_220h_1e_1c",
           img2:
             "https://p0.meituan.net/shaitu/4e2d6c09e6ae104dd49bbc8aecb0813a158121.jpg@220w_220h_1e_1c",
-          img3: "https://p0.meituan.net/shaitu/61e1fac5502b703a731fef387ed8c45b233154.jpg@220w_220h_1e_1c",
-          img4: "https://p1.meituan.net/shaitu/0241f19be30c1ba9878b2a6020a512bb221706.jpg@220w_220h_1e_1c",
+          img3:
+            "https://p0.meituan.net/shaitu/61e1fac5502b703a731fef387ed8c45b233154.jpg@220w_220h_1e_1c",
+          img4:
+            "https://p1.meituan.net/shaitu/0241f19be30c1ba9878b2a6020a512bb221706.jpg@220w_220h_1e_1c",
           img5: "",
           reply: "",
           type: 5

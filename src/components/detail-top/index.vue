@@ -12,6 +12,7 @@
         <div class="collect">
           <img src="../../assets/collect.png" alt />
           <p>收藏</p>
+          <!-- <el-button :plain="true" @click="open2">收藏</el-button> -->
         </div>
         <div class="collect" @click="hit_h()">
           <img src="../../assets/nav.png" alt />
@@ -38,6 +39,8 @@
   </div>
 </template>
 <script>
+import { Message } from "element-ui";
+import { Form } from "vant";
 export default {
   name: "detail-top",
   props: {},
@@ -56,7 +59,10 @@ export default {
     },
     hit_h() {
       this.hit = true;
-    }
+    },
+    // open2() {
+    //   this.$message("收藏成功");
+    // }
   }
 };
 </script>
