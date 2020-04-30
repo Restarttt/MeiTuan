@@ -19,16 +19,23 @@
         </div>
         <div class="price">
           <span>数量 :</span>
+          <van-stepper v-model="value" disable-plus input-width="60px" />
         </div>
         <div class="price">
           <span>总价 :</span>
           <span class="sum">{{order.sum}}元</span>
         </div>
+        <div class="commit_btn">
+          <button type="bottom">提交订单</button>
+        </div>
+        <p class="login">请登录后进行购买，去</p>
+        <span class="login_btn">登录</span>
       </div>
     </div>
   </div>
 </template>
 <script>
+import { Stepper, Form } from "vant";
 export default {
   name: "",
   props: {},
@@ -40,7 +47,7 @@ export default {
         unit: 98,
         sum: 98
       },
-      value:1
+      value: 1
     };
   },
   computed: {},
@@ -85,30 +92,52 @@ export default {
   font-size: 18px;
 }
 // 购买信息
-.order{
-    width: 100%;
-    height: 450px;
-    margin:  20px 0;
+.order {
+  width: 100%;
+  height: 450px;
+  margin: 40px 0;
 }
-.order p{
-    color: #333;
-    font-size: 17px;
-    margin: 15px;
+.order p {
+  color: #333;
+  font-size: 17px;
+  margin: 15px;
+  margin-right: 5px;
 }
-.price{
-    border-bottom: 1px solid #ddd8ce;
-    background-color: #fff;
-    padding: 15px 10px;
-    display: flex;
-    justify-content: space-between;
+.price {
+  border-bottom: 1px solid #ddd8ce;
+  background-color: #fff;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
 }
-.order span{
-    columns: #333;
-    font-size: 15px;
-
+.order span {
+  columns: #333;
+  font-size: 15px;
 }
-.order .sum{
-    color: #ff9712;
-    font-weight: 600;
+.order .sum {
+  color: #ff9712;
+  font-weight: 600;
+}
+.order .login {
+  color: #333;
+  font-size: 14px;
+  display: inline-block;
+}
+.order span.login_btn {
+  color: #06c1ae;
+  font-size: 14px;
+}
+// 提交订单
+.commit_btn {
+  width: 100%;
+}
+button {
+  display: block;
+  width: 90%;
+  height: 47px;
+  margin: 20px auto;
+  border-radius: 5px;
+  color: #999;
+  font-size: 18px;
 }
 </style>

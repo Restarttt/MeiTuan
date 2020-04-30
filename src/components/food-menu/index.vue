@@ -1,19 +1,11 @@
 <template>
-  <div class="food">
-    <food-search></food-search>
-   
-
-  </div>
+  <div class="food-menu"></div>
 </template>
 <script>
-import FoodSearch from '../../components/food-search'
-
 export default {
   name: "",
-  components: {
-     FoodSearch
-
-  },
+  props: {},
+  components: {},
   data() {
     return {};
   },
