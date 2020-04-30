@@ -1,11 +1,16 @@
 <template>
-  <div class="food">1</div>
+  <div class="food">
+   
+
+  </div>
 </template>
 <script>
+
 export default {
   name: "",
-  props: {},
-  components: {},
+  components: {
+
+  },
   data() {
     return {};
   },
