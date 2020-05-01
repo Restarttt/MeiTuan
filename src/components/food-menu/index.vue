@@ -31,13 +31,16 @@
     </div>
     <div class="menu_down">
       <div class="down_t">
-        <div class="left" v-show="menu.reduce ===1">
-          <span class="reduce">限时减45</span>
+        <div class="left">
+          <span class="reduce" v-if="menu.reduce ===1">限时减45</span>
         </div>
         <img src="http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png" alt />
         <p>{{menu.summary}}</p>
       </div>
       <div class="down_t" v-if="menu.coupon">
+        <div class="left">
+          <span class="reduce" v-if="menu.reduce ===1"></span>
+        </div>
         <img src="http://p1.meituan.net/codeman/5b202af2ecf82c69a433a246296ca4791278.png" alt />
         <p>{{ menu.coupon}}</p>
       </div>

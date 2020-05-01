@@ -11,7 +11,7 @@
       <div class="nav_r">
         <div class="collect">
           <img src="../../assets/collect.png" alt />
-          <p>收藏</p>
+          <p >收藏</p>
           <!-- <el-button :plain="true" @click="open2">收藏</el-button> -->
         </div>
         <div class="collect" @click="hit_h()">
@@ -40,7 +40,7 @@
 </template>
 <script>
 import { Message } from "element-ui";
-import { Form } from "vant";
+import { Form, Toast } from "vant";
 export default {
   name: "detail-top",
   props: {},
@@ -50,6 +50,9 @@ export default {
     };
   },
   computed: {},
+  mounted() {
+    this.$toast("提示文案");
+  },
   methods: {
     go() {
       this.$router.push("/");
@@ -59,7 +62,7 @@ export default {
     },
     hit_h() {
       this.hit = true;
-    },
+    }
     // open2() {
     //   this.$message("收藏成功");
     // }

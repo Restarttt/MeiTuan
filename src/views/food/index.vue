@@ -97,7 +97,7 @@ export default {
             "单人午餐83元，单人自助95元",
           coupon: "",
           time: 0,
-          reduce: 0,
+          reduce: 1,
           type:3
         },
         

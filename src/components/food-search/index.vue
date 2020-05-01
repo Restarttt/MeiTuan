@@ -36,23 +36,32 @@
         </van-cell>
         <van-cell center title="节假日可用">
           <template #right-icon>
-            <van-switch v-model="checked" size="24" inactive-color="#ddd" active-color="#06c1ae" />
+            <van-switch v-model="check" size="24" inactive-color="#ddd" active-color="#06c1ae" />
           </template>
         </van-cell>
         <div class="time">
           <p>用餐时段</p>
           <ul>
-            <li v-for="(item,index) of time_data" :key="index">
+            <li v-for="(item,index) of time_data" :key="index" :class="{frist:index === 0}">
               <span>{{item.name}}</span>
             </li>
           </ul>
+        </div>
+        <div class="star">
+          <div class="star_l">
+            <el-button size="mini">重置</el-button>
+          </div>
+          <div class="star_r">
+            <el-button size="mini" type="primary" plain>完成</el-button>
+          </div>
         </div>
       </van-dropdown-item>
     </van-dropdown-menu>
   </div>
 </template>
 <script>
-import { DropdownMenu, DropdownItem, Switch } from "vant";
+import { DropdownMenu, DropdownItem, Switch} from "vant";
+import { Button } from "element-ui";
 export default {
   name: "",
   components: {},
@@ -125,6 +134,7 @@ export default {
         { text: "人气最高", value: 2 }
       ],
       checked: false,
+      check: false,
       time_data: [
         { name: "不限" },
         { name: "早餐" },
@@ -143,8 +153,8 @@ export default {
     go() {
       this.$router.push("/login");
     },
-    go_search(){
-      this.$router.push('/search')
+    go_search() {
+      this.$router.push("/search");
     }
   }
 };
@@ -222,6 +232,13 @@ ul li p {
   font-size: 12px;
   margin-top: 3px;
 }
+.time ul .frist {
+  background: #eafcfa;
+  border: 1px solid #06c1ae;
+}
+.time ul .frist span {
+  color: #06c1ae;
+}
 //
 .time {
   width: 100%;
@@ -245,5 +262,11 @@ ul li p {
 .time ul li span {
   color: #666;
   font-size: 13px;
+}
+// 按钮
+.star {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 </style>
