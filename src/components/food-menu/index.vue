@@ -13,6 +13,8 @@
             <i></i>
             <i></i>
             <i></i>
+            <i class="half" v-show="menu.type >= 2"></i>
+            <i class="none" v-show="menu.type >=3"></i>
             <span>￥{{menu.price}}/人</span>
           </div>
           <div class="grade_r">
@@ -29,7 +31,9 @@
     </div>
     <div class="menu_down">
       <div class="down_t">
-        <span v-show="menu.reduce ===1" class="reduce">立减10.99</span>
+        <div class="left" v-show="menu.reduce ===1">
+          <span class="reduce">限时减45</span>
+        </div>
         <img src="http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png" alt />
         <p>{{menu.summary}}</p>
       </div>
@@ -115,6 +119,24 @@ p {
   background-size: cover;
   margin-right: 1px;
 }
+.grade i.half {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url(https://s1.meituan.net/bs/file/?f=meis/meishi.mobile:assets/f906908262f9b786.png@f70bb75)
+    no-repeat;
+  background-size: cover;
+  margin-right: 1px;
+}
+.grade i.none {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url(https://s1.meituan.net/bs/file/?f=meis/meishi.mobile:assets/e076efca46320452.png@f70bb75)
+    no-repeat;
+  background-size: cover;
+  margin-right: 1px;
+}
 
 // 类型
 .sort {
@@ -129,9 +151,10 @@ p {
 
 // 最下面优惠选项
 .menu_down {
-  margin: 5px 10px 10px 20px;
-
-  height: 20px;
+  margin: 5px 10px 0 20px;
+}
+.left {
+  width: 21%;
 }
 .down_t {
   display: flex;
@@ -139,11 +162,12 @@ p {
   padding: 3px 0;
 }
 .down_t span.reduce {
-  width: 50%;
+  // width: 20%;
   border: 1px solid #ff8226;
   color: #ff8226;
   border-radius: 3px;
   padding: 2px 3px;
+  text-align: center;
 }
 .down_t img {
   width: 15px;
@@ -152,6 +176,7 @@ p {
   margin: 0 5px;
 }
 .down_t p {
+  width: 80%;
   font-size: 12px;
   color: #666;
 }

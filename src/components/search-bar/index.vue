@@ -128,6 +128,7 @@ export default {
 input {
   padding-left: 10px;
   color: #999;
+  height: 20px;
 }
 .bar {
   display: inline-block;

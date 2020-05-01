@@ -8,7 +8,7 @@
       />
     </div>
     <div class="search_btn">
-      <div class="search">
+      <div class="search" @click="go_search()">
         <i></i>
         <span>输入商家名、品类或商圈</span>
       </div>
@@ -142,6 +142,9 @@ export default {
     },
     go() {
       this.$router.push("/login");
+    },
+    go_search(){
+      this.$router.push('/search')
     }
   }
 };
