@@ -24,7 +24,7 @@ export default {
     return {};
   },
   computed: {
-  chage() {
+    chage() {
       console.log(this.$store.state.name);
       return this.$store.state.name;
     }
@@ -79,7 +79,7 @@ export default {
   opacity: 0.8;
 }
 .search img {
-  width: 15px;
+  width: 22px;
   height: 15px;
   padding-right: 8px;
   vertical-align: middle;

@@ -11,7 +11,7 @@
     <detail-evaluate :data="item" v-for="(item,index) of evaluate_data" :key="index"></detail-evaluate>
     <home-detail :home_detail="evalute_detail"></home-detail>
     <detail-title :message="menu_title"></detail-title>
-    <detail-menu :menu_data="item" v-for="(item,index) of menu_data" :key="index"></detail-menu>
+    <detail-menu :menu_data="item" v-for="(item,index) of menu_data" :key="index+1000"></detail-menu>
     <detail-link></detail-link>
     <div class="arrows">
       <span></span>
@@ -29,6 +29,7 @@ import DetailEvaluate from "../../components/detail-evaluate";
 import HomeDetail from "../../components/home-detail";
 import DetailRelate from "../../components/detail-relate";
 import DetailLink from "../../components/detail-link";
+
 
 export default {
   name: "detail",

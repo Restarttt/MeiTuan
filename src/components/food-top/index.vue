@@ -19,7 +19,7 @@
         </div>
         <div class="price">
           <span>数量 :</span>
-          <van-stepper v-model="value" disable-plus input-width="60px" />
+          <van-stepper v-model="value"  input-width="60px" />
         </div>
         <div class="price">
           <span>总价 :</span>
@@ -29,7 +29,7 @@
           <button type="bottom">提交订单</button>
         </div>
         <p class="login">请登录后进行购买，去</p>
-        <span class="login_btn">登录</span>
+        <span class="login_btn" @click="go_login()">登录</span>
       </div>
     </div>
   </div>
@@ -54,6 +54,9 @@ export default {
   methods: {
     go() {
       this.$router.push("/detail");
+    },
+    go_login(){
+      this.$router.push('/login')
     }
   }
 };

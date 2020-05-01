@@ -43,10 +43,11 @@ export default {
 /* 左边 */
 .app_l {
   display: flex;
+  align-items: center;
 }
 .app_l img {
-  width: 38px;
-  height: 38px;
+  width: 50px;
+  height: 37px;
   padding-right: 10px;
 }
 .text {

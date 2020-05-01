@@ -160,6 +160,9 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.van-switch .van-switch__node{
+  font-size: 22px;
+}
 .food-search {
   width: 100%;
   background-color: #fff;

@@ -11,7 +11,7 @@
       <div class="nav_r">
         <div class="collect">
           <img src="../../assets/collect.png" alt />
-          <p >收藏</p>
+          <p @click="collect()">收藏</p>
           <!-- <el-button :plain="true" @click="open2">收藏</el-button> -->
         </div>
         <div class="collect" @click="hit_h()">
@@ -50,9 +50,7 @@ export default {
     };
   },
   computed: {},
-  mounted() {
-    this.$toast("提示文案");
-  },
+  mounted() {},
   methods: {
     go() {
       this.$router.push("/");
@@ -61,11 +59,13 @@ export default {
       this.$router.push("/login");
     },
     hit_h() {
-      this.hit = true;
+      this.hit = !this.hit;
+
+      //显示隐藏只要自身取反就行
+    },
+    collect() {
+      Toast.success("收藏成功");
     }
-    // open2() {
-    //   this.$message("收藏成功");
-    // }
   }
 };
 </script>

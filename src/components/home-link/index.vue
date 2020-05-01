@@ -167,7 +167,7 @@ export default {
   color: #999;
 }
 .loginbar_r img {
-  width: 12px;
+  width: 22px;
   height: 14px;
   padding: 0 5px;
 }

@@ -78,4 +78,7 @@ ul::after {
   border-left: 1px solid #ddd8ce;
   border-right: none;
 }
+a{
+  color: #222;
+}
 </style>
