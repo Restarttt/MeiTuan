@@ -79,13 +79,14 @@ export default {
   opacity: 0.8;
 }
 .search img {
-  width: 22px;
+  width: 15px;
   height: 15px;
   padding-right: 8px;
   vertical-align: middle;
 }
 .search span {
   color: #999;
+  font-size: 14px;
 }
 /* 右边登录 */
 .login img {

@@ -52,6 +52,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "",
   props: {
@@ -108,7 +109,14 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-
+.top {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  background: url(https://s1.meituan.net/bs/file/?f=meis/meishi.mobile:assets/cbcd00b445480e50.png@f70bb75)
+    no-repeat;
+  background-size: cover;
+}
 .business_service {
   width: 100%;
 }

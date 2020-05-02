@@ -110,6 +110,7 @@ i {
 .location {
   display: flex;
   align-items: center;
+  width: 31%;
 }
 input {
   border-color: #ffbd00;

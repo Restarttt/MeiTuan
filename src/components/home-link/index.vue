@@ -43,10 +43,15 @@
           <span>京ICP证070791号</span>
         </div>
       </div>
+
+      <!-- <BackTop :height="100" :bottom="200">
+        <div class="top"></div>
+      </BackTop> -->
     </div>
   </div>
 </template>
 <script>
+import { BackTop } from "view-design";
 export default {
   name: "",
   props: {},
@@ -127,8 +132,14 @@ export default {
 </script>
 <style lang="less" scoped>
 // 固定箭头
-
-
+.top {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  background: url(https://s1.meituan.net/bs/file/?f=meis/meishi.mobile:assets/cbcd00b445480e50.png@f70bb75)
+    no-repeat;
+  background-size: cover;
+}
 .home-link {
   width: 100%;
   background-color: #fff;
@@ -165,9 +176,10 @@ export default {
 }
 .city {
   color: #999;
+  font-size: 13px;
 }
 .loginbar_r img {
-  width: 22px;
+  width: 14px;
   height: 14px;
   padding: 0 5px;
 }

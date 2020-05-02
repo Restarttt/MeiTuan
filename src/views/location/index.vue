@@ -35,18 +35,10 @@ export default {
       visit_data: {
         title: "最近访问",
         list: [
-          // {
-          //   name: "扎兰屯市",
-          //   url: "https://i.meituan.com/zhalantunshi/"
-          // },
-          // {
-          //   name: "扎兰屯市",
-          //   url: "https://i.meituan.com/zhalantunshi/"
-          // },
-          // {
-          //   name: "扎兰屯市",
-          //   url: "https://i.meituan.com/zhalantunshi/"
-          // }
+          {
+            name: "吉安",
+            url: "https://i.meituan.com/zhalantunshi/"
+          },
         ]
       },
       hot_city: {

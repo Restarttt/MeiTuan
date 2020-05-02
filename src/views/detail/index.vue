@@ -13,9 +13,10 @@
     <detail-title :message="menu_title"></detail-title>
     <detail-menu :menu_data="item" v-for="(item,index) of menu_data" :key="index+1000"></detail-menu>
     <detail-link></detail-link>
-    <div class="arrows">
-      <span></span>
-    </div>
+    <!-- <div class="arrows">
+    
+    </div> -->
+  
   </div>
 </template>
 <script>
@@ -42,7 +43,7 @@ export default {
     DetailEvaluate,
     DetailRelate,
     HomeDetail,
-    DetailLink,
+    DetailLink
     // DetailBuy
   },
   data() {
@@ -128,7 +129,7 @@ export default {
       ]
     };
   },
-  computed: {},
+
   methods: {}
 };
 </script>
@@ -138,14 +139,8 @@ export default {
   height: 100%;
   background-color: #f0f0f0;
 }
-.arrows {
-  width: 43px;
-  height: 43px;
-  position: fixed;
-  right: 10%;
-  bottom: 8%;
-}
-.arrows span {
+
+.top {
   display: inline-block;
   width: 43px;
   height: 43px;

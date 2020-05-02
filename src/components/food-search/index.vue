@@ -24,7 +24,7 @@
       </ul>
     </div>
     <!-- 选择栏目 -->
-    <van-dropdown-menu active-color="#06c1ae">
+    <van-dropdown-menu active-color="#06c1ae" >
       <van-dropdown-item v-model="value" :options="all" />
       <van-dropdown-item title="附近商家" v-model="value" :options="nearby"></van-dropdown-item>
       <van-dropdown-item title="智能排序" v-model="value" :options="sort"></van-dropdown-item>
